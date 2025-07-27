@@ -105,18 +105,26 @@ body {
     justify-content: center;
 }
 
-.character-placeholder {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
+.character-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 2rem;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.character-icon {
-    font-size: 4rem;
-    margin-bottom: 1rem;
+.character-image {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.character-image:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
 }
 
 /* ボタンスタイル */
@@ -546,6 +554,14 @@ section {
     
     .hero-subtitle {
         font-size: 1rem;
+    }
+    
+    .character-image {
+        max-width: 250px;
+    }
+    
+    .character-container {
+        padding: 1rem;
     }
     
     .btn {
